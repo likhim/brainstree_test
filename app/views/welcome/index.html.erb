@@ -3,5 +3,8 @@
 
 <%= link_to "Make Payment", brainstree_new_path %>
 
-
-
+<% flash.each do |key, value| %>
+  <div class="<%= flash_class(key) %>">
+    <%= value %>
+  </div>
+<% end %>
